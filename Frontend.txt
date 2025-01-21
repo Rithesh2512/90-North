@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Webpage</title>
+    <style>
+        body { margin:  0; }
+       .navbar { position: fixed; top: 0; width:  100%; background: #333; color: white; padding: 10px; }
+        .container width: { display: 20%; flex; background: margin-top: #f4f4f4; 50px; transition: }
+ width        .left-menu {  0.3s; }
+       .main-content { width: 60%; padding: 20px; }
+        .right-panel { width: 20%; background:  #f4f4f4; }
+        footer { text-align: center; padding: 10px; background:  #333; color: white; position: relative; }
+    </style>
+</head>
+<body>
+     <div class="navbar">Fixed Navbar</div>
+    <div class="container">
+         <div class="left-menu" id="leftMenu">Left Menu</div>
+        <div  class="main-content">Main Content Area</div>
+        <div class="right-panel">Right  Panel</div>
+    </div>
+    <footer>Footer</footer>
+
+    <script>
+         function resizePage() {
+            const width = window.innerWidth;
+            const leftMenu =  document.getElementById('leftMenu');
+  document.body.style.transform  =  scale(0.9)';
+   &&   width   <   992)   {
+        if   (width   >   992   && }  width else  <= if  1600) (width  {
+ >=   700            document.body.style.transform  =  scale(0.8)';
+                    } else if (width >= 600 && width < 700) {
+                 document.body.style.transform = scale(0.75)';
+            } else if (width <= 600) {
+                 document.body.style.transform = scale(0.5)';
+            } else {
+                 document.body.style.transform = scale(1)';
+            }
+        }
+
+        window.addEventListener('resize', resizePage);
+         window.onload = resizePage; // Initial call
+    </script>
+</body>
+ </html>
